@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 100 100"
+     data-sema-version="0.1.0"
+     data-sema-project="fixture-invalid-reference"
+     data-sema-view="main"
+     data-sema-view-kind="floor-plan"
+     data-sema-coordinate-mode="physical"
+     data-sema-unit="mm"
+     data-sema-profiles="building@0.1.0">
+  <rect id="repr-door-a"
+        data-sema-entity="opening-a"
+        data-sema-type="building:opening"
+        data-sema-host="wall-does-not-exist"
+        x="0" y="0" width="10" height="50"/>
+</svg>

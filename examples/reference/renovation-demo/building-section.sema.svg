@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 13400 7400"
+     data-sema-version="0.1.0"
+     data-sema-project="renovation-demo"
+     data-sema-view="building-section"
+     data-sema-view-kind="section"
+     data-sema-coordinate-mode="physical"
+     data-sema-unit="mm"
+     data-sema-scope="building-main"
+     data-sema-z-datum="level-ground"
+     data-sema-profiles="building@0.1.0">
+  <title>Renovation demo: building section</title>
+  <desc>Synthetic vertical context. Z zero is the ground-level finished floor; section geometry uses Y = 6800 - Z.</desc>
+  <style>
+    .level { fill: #fafafa; stroke: #bbb; stroke-width: 12; }
+    .slab { fill: #555; }
+    .column { fill: #777; }
+    .roof { fill: #d9dde0; stroke: #444; stroke-width: 24; }
+    .stair { fill: none; stroke: #986f2f; stroke-width: 50; }
+    .shaft { fill: #eef4f7; stroke: #5488a3; stroke-width: 20; stroke-dasharray: 70 45; }
+    .label { font-family: sans-serif; font-size: 180px; fill: #222; }
+    .small { font-size: 125px; }
+    .datum { fill: none; stroke: #809198; stroke-width: 12; }
+    .datum-label { font-family: sans-serif; font-size: 150px; fill: #465960; }
+  </style>
+  <rect id="view-background"
+        data-sema-role="decoration"
+        x="0" y="0" width="13400" height="7400" fill="#fff"/>
+  <g id="repr-building-main-section"
+     data-sema-entity="building-main"
+     data-sema-type="building:building"
+     data-sema-parent="site-main"
+     data-sema-state="existing">
+    <rect id="repr-level-first-section"
+          data-sema-entity="level-first"
+          data-sema-type="building:level"
+          data-sema-parent="building-main"
+          data-sema-elevation-mm="2800"
+          data-sema-floor-height-mm="2800"
+          data-sema-ceiling-height-mm="2600"
+          data-sema-state="planned"
+          x="1000" y="1400" width="10000" height="2600" class="level"/>
+    <rect id="repr-level-ground-section"
+          data-sema-entity="level-ground"
+          data-sema-type="building:level"
+          data-sema-parent="building-main"
+          data-sema-elevation-mm="0"
+          data-sema-floor-height-mm="2800"
+          data-sema-ceiling-height-mm="2600"
+          data-sema-state="existing"
+          x="1000" y="4200" width="10000" height="2600" class="level"/>
+    <rect id="repr-slab-ground"
+          data-sema-entity="slab-ground"
+          data-sema-type="building:slab"
+          data-sema-parent="building-main"
+          data-sema-z-min-mm="-250"
+          data-sema-z-max-mm="0"
+          data-sema-state="existing"
+          x="800" y="6800" width="10400" height="250" class="slab"/>
+    <rect id="repr-slab-first"
+          data-sema-entity="slab-first"
+          data-sema-type="building:slab"
+          data-sema-parent="building-main"
+          data-sema-z-min-mm="2600"
+          data-sema-z-max-mm="2800"
+          data-sema-state="planned"
+          x="800" y="4000" width="10400" height="200" class="slab"/>
+    <!-- An explicit synthetic opening clears the stair flight through the slab. -->
+    <rect id="repr-opening-stair-first-section"
+          data-sema-entity="opening-stair-first"
+          data-sema-type="building:opening"
+          data-sema-opening-kind="passage"
+          data-sema-host="slab-first"
+          data-sema-connects-levels="level-ground level-first"
+          data-sema-traversable="true"
+          data-sema-z-min-mm="2600"
+          data-sema-z-max-mm="2800"
+          data-sema-state="planned"
+          data-sema-certainty="estimated"
+          data-sema-source="synthetic-design"
+          x="3000" y="4000" width="2400" height="200" fill="#fafafa">
+      <title>Stair opening through the first-floor slab</title>
+      <desc>Synthetic opening along the illustrated flight. Stair ergonomics, headroom and structural detailing are not established.</desc>
+    </rect>
+    <rect id="repr-column-west"
+          data-sema-entity="column-west"
+          data-sema-type="building:column"
+          data-sema-parent="building-main"
+          data-sema-z-min-mm="0"
+          data-sema-z-max-mm="5600"
+          data-sema-state="planned"
+          x="1500" y="1200" width="260" height="5600" class="column"/>
+    <polygon id="repr-column-center"
+             data-sema-entity="column-center"
+             data-sema-type="building:column"
+             data-sema-parent="building-main"
+             data-sema-z-min-mm="0"
+             data-sema-z-max-mm="6150"
+             data-sema-state="planned"
+             data-sema-certainty="estimated"
+             data-sema-source="synthetic-design"
+             points="5870,6800 5870,670 6000,650 6130,670 6130,6800" class="column">
+      <desc>Synthetic extension to the existing roof soffit. The top follows that profile; no structural joint or load capacity is specified.</desc>
+    </polygon>
+    <rect id="repr-column-east"
+          data-sema-entity="column-east"
+          data-sema-type="building:column"
+          data-sema-parent="building-main"
+          data-sema-z-min-mm="0"
+          data-sema-z-max-mm="5600"
+          data-sema-state="planned"
+          x="10240" y="1200" width="260" height="5600" class="column"/>
+    <polygon id="repr-roof-main"
+             data-sema-entity="roof-main"
+             data-sema-type="building:roof"
+             data-sema-parent="building-main"
+             data-sema-roof-kind="gable"
+             data-sema-z-min-mm="5400"
+             data-sema-z-max-mm="6500"
+             data-sema-state="planned"
+             points="650,1200 6000,300 11350,1200 10900,1400 6000,650 1100,1400" class="roof"/>
+    <polyline id="repr-stair-main-section"
+              data-sema-entity="stair-main"
+              data-sema-type="building:vertical-connection"
+              data-sema-vertical-connection-kind="stair"
+              data-sema-connects-levels="level-ground level-first"
+              data-sema-z-min-mm="0"
+              data-sema-z-max-mm="2800"
+              data-sema-state="planned"
+              points="2500,6800 3000,6800 3000,6400 3400,6400 3400,6000 3800,6000 3800,5600 4200,5600 4200,5200 4600,5200 4600,4800 5000,4800 5000,4400 5400,4400 5400,4000"
+              class="stair"/>
+    <rect id="repr-shaft-services-section"
+          data-sema-entity="shaft-services"
+          data-sema-type="building:space"
+          data-sema-space-kind="shaft"
+          data-sema-purpose="building-services"
+          data-sema-parent="building-main"
+          data-sema-state="planned"
+          x="8550" y="1400" width="900" height="5400" class="shaft"/>
+  </g>
+  <g id="labels">
+    <text id="label-roof"
+          data-sema-type="core:label"
+          data-sema-for="roof-main"
+          x="7500" y="1100" class="label">Roof</text>
+    <text id="label-level-first"
+          data-sema-type="core:label"
+          data-sema-for="level-first"
+          x="6500" y="2800" class="label">First level</text>
+    <text id="label-level-ground"
+          data-sema-type="core:label"
+          data-sema-for="level-ground"
+          x="6500" y="5600" class="label">Ground level</text>
+    <text id="label-stair"
+          data-sema-type="core:label"
+          data-sema-for="stair-main"
+          x="2600" y="7200" class="label small">Vertical connection: stair</text>
+    <text id="label-shaft"
+          data-sema-type="core:label"
+          data-sema-for="shaft-services"
+          x="8350" y="7200" class="label small">Services shaft</text>
+  </g>
+  <g id="level-datums">
+    <path
+          data-sema-role="decoration"
+          d="M11450 6800 H11700 M11450 4000 H11700 M11450 300 H11700" class="datum"/>
+    <text id="label-datum-level-ground"
+          data-sema-type="core:label"
+          data-sema-for="level-ground"
+          x="11800" y="6850" class="datum-label">0.000 m</text>
+    <text id="label-datum-level-first"
+          data-sema-type="core:label"
+          data-sema-for="level-first"
+          x="11800" y="4050" class="datum-label">+2.800 m</text>
+    <text id="label-datum-roof-main"
+          data-sema-type="core:label"
+          data-sema-for="roof-main"
+          x="11800" y="350" class="datum-label">+6.500 m</text>
+  </g>
+</svg>

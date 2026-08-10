@@ -1,0 +1,1973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 450 525"
+     data-sema-version="0.1.0"
+     data-sema-project="renovation-demo"
+     data-sema-view="panel-main-layout"
+     data-sema-view-kind="equipment-layout"
+     data-sema-coordinate-mode="physical"
+     data-sema-unit="mm"
+     data-sema-scope="panel-main"
+     data-sema-certainty="estimated"
+     data-sema-source="synthetic-design"
+     data-sema-profiles="electrical@0.1.0">
+  <style>
+    text { font-family: sans-serif; }
+    .backplate { fill: #fafbf9; stroke: #9ca9a9; stroke-width: 1; }
+    .rail { fill: #b7c0c2; stroke: #65777b; stroke-width: 1; }
+    .device { fill: #fff; stroke: #26383e; stroke-width: 1.1; }
+    .terminal { fill: #f5f6f2; stroke: #45595d; stroke-width: 1; }
+    .detail { fill: #e8eded; stroke: #718287; stroke-width: .55; }
+    .screw { fill: #fafaf7; stroke: #40545a; stroke-width: .6; }
+    .ferrule { fill: #f3d339; stroke: #806c1b; stroke-width: .55; }
+    .l { fill: none; stroke: #8b5a3c; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .n { fill: none; stroke: #237fb3; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .pe { fill: none; stroke: url(#pe-wire); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .comb { fill: none; stroke: #bd603d; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-casing { fill: none; stroke: #fafbf9; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+    .cable-sheath { fill: none; stroke: #aeb9bc; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .cable-feeder { stroke: #d1d8d8; stroke-width: 4; }
+    .label { font: 7px sans-serif; fill: #1f2d31; }
+    .label-title { font-size: 10px; }
+    .tiny { font-size: 5px; }
+    .micro { font-size: 3.5px; }
+    .rating { font: bold 5px sans-serif; fill: #243238; }
+    .bar-back { fill: #eef2f2; stroke: #8d9a9d; stroke-width: .7; }
+    .blank { fill: #edf0ee; stroke: #aeb7ba; stroke-width: .7; }
+  </style>
+  <rect id="view-background"
+        data-sema-role="decoration"
+        x="0" y="0" width="450" height="525" fill="#fff"/>
+  <defs>
+    <pattern id="pe-wire" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="12" fill="#6f9a36"/>
+      <rect x="6" width="6" height="12" fill="#f0cf36"/>
+    </pattern>
+    <g id="screw-mark">
+      <circle r="2.4" class="screw"/>
+      <path d="M-1.5 0h3m-1.5-1.5v3" stroke="#40545a" stroke-width=".5"/>
+    </g>
+    <g id="meter-front">
+      <rect x="4" y="10" width="28" height="19" rx="1" fill="#b8d9d3" stroke="#5c7d78"/>
+      <rect x="7" y="14" width="22" height="9" fill="#d6ece7"/>
+      <text x="9" y="21" class="tiny">00042</text>
+      <rect x="7" y="37" width="22" height="16" class="detail"/>
+      <circle cx="18" cy="45" r="5" fill="#d3a244" stroke="#80601d"/>
+    </g>
+    <g id="isolator-front">
+      <rect x="5" y="27" width="26" height="29" rx="2" class="detail"/>
+      <path d="M11 50l14-17" stroke="#263940" stroke-width="2.2"/>
+      <circle cx="9" cy="65" r="2" fill="#c93932"/>
+    </g>
+    <g id="rcbo-front">
+      <rect x="5" y="27" width="26" height="29" rx="2" class="detail"/>
+      <path d="M11 50l14-17" stroke="#263940" stroke-width="2.2"/>
+      <rect x="8" y="61" width="7" height="5" fill="#4e9c65"/>
+      <circle cx="25" cy="64" r="3" fill="#d6a945" stroke="#80601d"/>
+    </g>
+    <g id="rccb-front">
+      <rect x="5" y="25" width="26" height="31" rx="2" class="detail"/>
+      <path d="M11 50l14-17" stroke="#263940" stroke-width="2.2"/>
+      <circle cx="11" cy="64" r="3" fill="#d6a945" stroke="#80601d"/>
+      <rect x="20" y="61" width="8" height="5" fill="#5c96bb"/>
+    </g>
+    <g id="mcb-front">
+      <rect x="2" y="27" width="14" height="29" rx="1" class="detail"/>
+      <path d="M6 50l6-12" stroke="#263940" stroke-width="1.7"/>
+    </g>
+  </defs>
+  <g id="layer-background-rails">
+    <text x="30" y="18" class="label label-title">MAIN DISTRIBUTION PANEL - 24 MODULES</text>
+    <text x="30" y="30" class="label">Synthetic one-phase mounting and wiring diagram</text>
+    <g id="repr-panel-main-layout"
+       data-sema-entity="panel-main"
+       data-sema-type="electrical:panel"
+       data-sema-system="system-electrical"
+       data-sema-origin="supply-main"
+       data-sema-phases="1"
+       data-sema-voltage-v="230"
+       data-sema-module-capacity="24"
+       data-sema-enclosure-model="synthetic-24-module-enclosure"
+       data-sema-state="existing">
+      <rect
+            data-sema-role="geometry"
+            x="40" y="40" width="370" height="420" class="backplate"/>
+    </g>
+    <g id="repr-din-rail-1"
+       data-sema-entity="din-rail-1"
+       data-sema-type="electrical:din-rail"
+       data-sema-parent="panel-main"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="110" y="130" width="230" height="35" class="rail"/>
+      <path d="M110 141h230m-230 13h230" stroke="#f2f4f2" stroke-width="2"/>
+    </g>
+    <g id="repr-din-rail-2"
+       data-sema-entity="din-rail-2"
+       data-sema-type="electrical:din-rail"
+       data-sema-parent="panel-main"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="110" y="345" width="230" height="35" class="rail"/>
+      <path d="M110 356h230m-230 13h230" stroke="#f2f4f2" stroke-width="2"/>
+    </g>
+  </g>
+  <g id="layer-panel-routes">
+    <g id="repr-conductor-main-l-feed-layout"
+       data-sema-entity="conductor-main-l-feed"
+       data-sema-type="electrical:conductor"
+       data-sema-from="meter-main-l-out"
+       data-sema-to="main-isolator-l-in"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="126,190 126,218 96,218 96,92 162,92 162,105" class="l"/>
+    </g>
+    <g id="repr-conductor-main-n-feed-layout"
+       data-sema-entity="conductor-main-n-feed"
+       data-sema-type="electrical:conductor"
+       data-sema-from="meter-main-n-out"
+       data-sema-to="main-isolator-n-in"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="144,190 144,224 90,224 90,86 180,86 180,105" class="n"/>
+    </g>
+    <g id="repr-conductor-main-pe-feed-layout"
+       data-sema-entity="conductor-main-pe-feed"
+       data-sema-type="electrical:conductor"
+       data-sema-from="supply-main-pe-out"
+       data-sema-to="busbar-pe-in"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="55,292 48,292 48,250 60,250 60,260" class="pe"/>
+    </g>
+    <g id="repr-conductor-main-phase-distribution-layout"
+       data-sema-entity="conductor-main-phase-distribution"
+       data-sema-type="electrical:conductor"
+       data-sema-from="main-isolator-l-out"
+       data-sema-to="busbar-main-phase-distribution-in"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="162,190 162,198 360,198 360,205" class="l"/>
+    </g>
+    <g id="repr-conductor-main-neutral-distribution-layout"
+       data-sema-entity="conductor-main-neutral-distribution"
+       data-sema-type="electrical:conductor"
+       data-sema-from="main-isolator-n-out"
+       data-sema-to="busbar-main-neutral-distribution-in"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="180,190 180,202 390,202 390,205" class="n"/>
+    </g>
+    <g id="repr-conductor-hob-input-layout"
+       data-sema-entity="conductor-hob-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-main-phase-distribution-tap-c4"
+       data-sema-to="rcbo-hob-l-in"
+       data-sema-circuit="circuit-hob"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="356,235 356,84 198,84 198,105" class="l"/>
+    </g>
+    <g id="repr-conductor-hob-neutral-input-layout"
+       data-sema-entity="conductor-hob-neutral-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-main-neutral-distribution-tap-c4"
+       data-sema-to="rcbo-hob-n-in"
+       data-sema-circuit="circuit-hob"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="386,235 386,72 216,72 216,105" class="n"/>
+    </g>
+    <g id="repr-conductor-rccb-input-layout"
+       data-sema-entity="conductor-rccb-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-main-phase-distribution-tap-rccb"
+       data-sema-to="rccb-general-circuits-l-in"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="364,235 364,78 234,78 234,105" class="l"/>
+    </g>
+    <g id="repr-conductor-rccb-neutral-input-layout"
+       data-sema-entity="conductor-rccb-neutral-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-main-neutral-distribution-tap-rccb"
+       data-sema-to="rccb-general-circuits-n-in"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="394,235 394,66 252,66 252,105" class="n"/>
+    </g>
+    <g id="repr-conductor-rccb-output-layout"
+       data-sema-entity="conductor-rccb-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="rccb-general-circuits-l-out"
+       data-sema-to="busbar-comb-rccb-group-l-in"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="243,190 243,216 342,216 342,96 333,96" class="l"/>
+    </g>
+    <g id="repr-conductor-rccb-neutral-output-layout"
+       data-sema-entity="conductor-rccb-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="rccb-general-circuits-n-out"
+       data-sema-to="busbar-neutral-in"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="252,190 252,254 356,254 356,260" class="n"/>
+    </g>
+    <g id="repr-conductor-comb-kitchen-layout"
+       data-sema-entity="conductor-comb-kitchen-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-comb-rccb-group-tap-c2"
+       data-sema-to="breaker-kitchen-sockets-l-in"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="270,99 270,105" class="l"/>
+    </g>
+    <g id="repr-conductor-comb-office-layout"
+       data-sema-entity="conductor-comb-office-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-comb-rccb-group-tap-c3"
+       data-sema-to="breaker-office-sockets-l-in"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="288,99 288,105" class="l"/>
+    </g>
+    <g id="repr-conductor-comb-general-layout"
+       data-sema-entity="conductor-comb-general-input"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-comb-rccb-group-tap-c1"
+       data-sema-to="breaker-general-sockets-l-in"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="306,99 306,105" class="l"/>
+    </g>
+    <g id="repr-conductor-comb-lighting-layout"
+       data-sema-entity="conductor-comb-lighting-input"
+       data-sema-from="busbar-comb-rccb-group-tap-c5"
+       data-sema-to="breaker-lighting-ground-l-in"
+       data-sema-type="electrical:conductor"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="324,99 324,105" class="l"/>
+    </g>
+    <g id="repr-conductor-hob-output-layout"
+       data-sema-entity="conductor-hob-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="rcbo-hob-l-out"
+       data-sema-to="terminal-outgoing-c4"
+       data-sema-circuit="circuit-hob"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="207,190 207,230 198,230 198,425" class="l"/>
+    </g>
+    <g id="repr-conductor-kitchen-output-layout"
+       data-sema-entity="conductor-kitchen-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="breaker-kitchen-sockets-l-out"
+       data-sema-to="terminal-outgoing-c2"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="270,190 270,234 216,234 216,425" class="l"/>
+    </g>
+    <g id="repr-conductor-office-output-layout"
+       data-sema-entity="conductor-office-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="breaker-office-sockets-l-out"
+       data-sema-to="terminal-outgoing-c3"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="288,190 288,238 234,238 234,425" class="l"/>
+    </g>
+    <g id="repr-conductor-general-output-layout"
+       data-sema-entity="conductor-general-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="breaker-general-sockets-l-out"
+       data-sema-to="terminal-outgoing-c1"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="306,190 306,242 252,242 252,425" class="l"/>
+    </g>
+    <g id="repr-conductor-lighting-output-layout"
+       data-sema-entity="conductor-lighting-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="breaker-lighting-ground-l-out"
+       data-sema-to="terminal-outgoing-c5"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-conductor-kind="L"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="geometry"
+                points="324,190 324,246 270,246 270,425" class="l"/>
+    </g>
+    <g id="repr-conductor-c4-neutral-output-layout"
+       data-sema-entity="conductor-c4-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="rcbo-hob-n-out"
+       data-sema-to="terminal-outgoing-c4-n"
+       data-sema-circuit="circuit-hob"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="216,190 216,226 192,226 192,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="216,190 216,226 192,226 192,425" class="n"/>
+    </g>
+    <g id="repr-conductor-c2-neutral-output-layout"
+       data-sema-entity="conductor-c2-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-neutral-tap-c2"
+       data-sema-to="terminal-outgoing-c2-n"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="364,272 364,312 210,312 210,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="364,272 364,312 210,312 210,425" class="n"/>
+    </g>
+    <g id="repr-conductor-c3-neutral-output-layout"
+       data-sema-entity="conductor-c3-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-neutral-tap-c3"
+       data-sema-to="terminal-outgoing-c3-n"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="374,272 374,318 228,318 228,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="374,272 374,318 228,318 228,425" class="n"/>
+    </g>
+    <g id="repr-conductor-c1-neutral-output-layout"
+       data-sema-entity="conductor-c1-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-neutral-tap-c1"
+       data-sema-to="terminal-outgoing-c1-n"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="384,272 384,324 246,324 246,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="384,272 384,324 246,324 246,425" class="n"/>
+    </g>
+    <g id="repr-conductor-c5-neutral-output-layout"
+       data-sema-entity="conductor-c5-neutral-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-neutral-tap-c5"
+       data-sema-to="terminal-outgoing-c5-n"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-conductor-kind="N"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="394,272 394,330 264,330 264,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="394,272 394,330 264,330 264,425" class="n"/>
+    </g>
+    <g id="repr-conductor-c4-pe-output-layout"
+       data-sema-entity="conductor-c4-pe-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-pe-tap-c4"
+       data-sema-to="terminal-outgoing-c4-pe"
+       data-sema-circuit="circuit-hob"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="68,272 68,282 204,282 204,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="68,272 68,282 204,282 204,425" class="pe"/>
+    </g>
+    <g id="repr-conductor-c2-pe-output-layout"
+       data-sema-entity="conductor-c2-pe-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-pe-tap-c2"
+       data-sema-to="terminal-outgoing-c2-pe"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="76,272 76,288 222,288 222,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="76,272 76,288 222,288 222,425" class="pe"/>
+    </g>
+    <g id="repr-conductor-c3-pe-output-layout"
+       data-sema-entity="conductor-c3-pe-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-pe-tap-c3"
+       data-sema-to="terminal-outgoing-c3-pe"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="84,272 84,294 240,294 240,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="84,272 84,294 240,294 240,425" class="pe"/>
+    </g>
+    <g id="repr-conductor-c1-pe-output-layout"
+       data-sema-entity="conductor-c1-pe-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-pe-tap-c1"
+       data-sema-to="terminal-outgoing-c1-pe"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="92,272 92,300 258,300 258,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="92,272 92,300 258,300 258,425" class="pe"/>
+    </g>
+    <g id="repr-conductor-c5-pe-output-layout"
+       data-sema-entity="conductor-c5-pe-output"
+       data-sema-type="electrical:conductor"
+       data-sema-from="busbar-pe-tap-c5"
+       data-sema-to="terminal-outgoing-c5-pe"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-conductor-kind="PE"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <polyline
+                data-sema-role="decoration"
+                points="100,272 100,306 276,306 276,425" class="wire-casing"/>
+      <polyline
+                data-sema-role="geometry"
+                points="100,272 100,306 276,306 276,425" class="pe"/>
+    </g>
+    <g id="repr-cable-service-entry-layout"
+       data-sema-entity="cable-service-entry"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="supply-main"
+       data-sema-to="meter-main"
+       data-sema-core-count="2"
+       data-sema-core-cross-section-mm2="10"
+       data-sema-cable-description="2 x 10 mm2 service cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M55 62h71v43h18" class="cable-sheath"/>
+      <path d="M55 60h71v45" class="l"/>
+      <path d="M55 64h89v41" class="n"/>
+    </g>
+    <g id="repr-cable-hob-layout"
+       data-sema-entity="cable-hob"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="terminal-outgoing-c4"
+       data-sema-to="appliance-hob"
+       data-sema-circuit="circuit-hob"
+       data-sema-core-count="3"
+       data-sema-core-cross-section-mm2="6"
+       data-sema-cable-description="3 x 6 mm2 hob cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M198 450v10" class="cable-sheath"/>
+    </g>
+    <g id="repr-cable-kitchen-sockets-layout"
+       data-sema-entity="cable-kitchen-sockets"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="terminal-outgoing-c2"
+       data-sema-to="socket-kitchen-worktop"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-core-count="3"
+       data-sema-core-cross-section-mm2="2.5"
+       data-sema-cable-description="3 x 2.5 mm2 kitchen socket cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M216 450v10" class="cable-sheath"/>
+    </g>
+    <g id="repr-cable-office-sockets-layout"
+       data-sema-entity="cable-office-sockets"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="terminal-outgoing-c3"
+       data-sema-to="socket-office-workstation-02"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-core-count="3"
+       data-sema-core-cross-section-mm2="2.5"
+       data-sema-cable-description="3 x 2.5 mm2 socket cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M234 450v10" class="cable-sheath"/>
+    </g>
+    <g id="repr-cable-general-sockets-layout"
+       data-sema-entity="cable-general-sockets"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="terminal-outgoing-c1"
+       data-sema-to="socket-bedroom-existing-blocked"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-core-count="3"
+       data-sema-core-cross-section-mm2="2.5"
+       data-sema-cable-description="3 x 2.5 mm2 general socket cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M252 450v10" class="cable-sheath"/>
+    </g>
+    <g id="repr-cable-lighting-ground-layout"
+       data-sema-entity="cable-lighting-ground"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="terminal-outgoing-c5"
+       data-sema-to="light-corridor-main"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-core-count="3"
+       data-sema-core-cross-section-mm2="1.5"
+       data-sema-cable-description="3 x 1.5 mm2 lighting cable"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <path
+            data-sema-role="geometry"
+            d="M270 450v10" class="cable-sheath"/>
+    </g>
+  </g>
+  <g id="layer-device-bodies">
+    <g id="repr-meter-main-layout"
+       data-sema-entity="meter-main"
+       data-sema-type="electrical:device"
+       data-sema-system="system-electrical"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="energy-meter"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="1"
+       data-sema-module-count="2"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="117" y="105" width="36" height="85" class="device"/>
+      <use href="#meter-front" x="117" y="105"/>
+    </g>
+    <g id="repr-main-isolator-layout"
+       data-sema-entity="main-isolator"
+       data-sema-type="electrical:device"
+       data-sema-system="system-electrical"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="main-isolator"
+       data-sema-poles="2P"
+       data-sema-rated-current-a="63"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="3"
+       data-sema-module-count="2"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="153" y="105" width="36" height="85" class="device"/>
+      <use href="#isolator-front" x="153" y="105"/>
+    </g>
+    <g id="repr-busbar-main-phase-distribution-layout"
+       data-sema-entity="busbar-main-phase-distribution"
+       data-sema-type="electrical:busbar"
+       data-sema-parent="panel-main"
+       data-sema-busbar-kind="phase"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="geometry"
+            x="350" y="205" width="20" height="30" class="terminal"/>
+      <line x1="354" y1="215" x2="366" y2="215" class="l"/>
+    </g>
+    <g id="repr-busbar-main-neutral-distribution-layout"
+       data-sema-entity="busbar-main-neutral-distribution"
+       data-sema-type="electrical:busbar"
+       data-sema-parent="panel-main"
+       data-sema-busbar-kind="neutral"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="geometry"
+            x="380" y="205" width="20" height="30" class="terminal"/>
+      <line x1="384" y1="215" x2="396" y2="215" class="n"/>
+    </g>
+    <g id="repr-rcbo-hob-layout"
+       data-sema-entity="rcbo-hob"
+       data-sema-type="electrical:protective-device"
+       data-sema-system="system-electrical"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="rcbo"
+       data-sema-circuit="circuit-hob"
+       data-sema-poles="1P+N"
+       data-sema-breaker-curve="C"
+       data-sema-rated-current-a="32"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="5"
+       data-sema-module-count="2"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="189" y="105" width="36" height="85" class="device"/>
+      <use href="#rcbo-front" x="189" y="105"/>
+    </g>
+    <g id="repr-rccb-general-circuits-layout"
+       data-sema-entity="rccb-general-circuits"
+       data-sema-type="electrical:protective-device"
+       data-sema-system="system-electrical"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="rcd"
+       data-sema-poles="2P"
+       data-sema-rated-current-a="63"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="7"
+       data-sema-module-count="2"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="225" y="105" width="36" height="85" class="device"/>
+      <use href="#rccb-front" x="225" y="105"/>
+    </g>
+    <g id="repr-breaker-kitchen"
+       data-sema-entity="breaker-kitchen-sockets"
+       data-sema-type="electrical:protective-device"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="mcb"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-poles="1P"
+       data-sema-breaker-curve="C"
+       data-sema-rated-current-a="16"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="9"
+       data-sema-module-count="1"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="261" y="105" width="18" height="85" class="device"/>
+      <use href="#mcb-front" x="261" y="105"/>
+    </g>
+    <g id="repr-breaker-office"
+       data-sema-entity="breaker-office-sockets"
+       data-sema-type="electrical:protective-device"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="mcb"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-poles="1P"
+       data-sema-breaker-curve="C"
+       data-sema-rated-current-a="16"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="10"
+       data-sema-module-count="1"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="279" y="105" width="18" height="85" class="device"/>
+      <use href="#mcb-front" x="279" y="105"/>
+    </g>
+    <g id="repr-breaker-general"
+       data-sema-entity="breaker-general-sockets"
+       data-sema-type="electrical:protective-device"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="mcb"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-poles="1P"
+       data-sema-breaker-curve="C"
+       data-sema-rated-current-a="16"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="11"
+       data-sema-module-count="1"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="297" y="105" width="18" height="85" class="device"/>
+      <use href="#mcb-front" x="297" y="105"/>
+    </g>
+    <g id="repr-breaker-lighting"
+       data-sema-entity="breaker-lighting-ground"
+       data-sema-type="electrical:protective-device"
+       data-sema-parent="panel-main"
+       data-sema-device-kind="mcb"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-poles="1P"
+       data-sema-breaker-curve="C"
+       data-sema-rated-current-a="10"
+       data-sema-rail="din-rail-1"
+       data-sema-slot-start="12"
+       data-sema-module-count="1"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="315" y="105" width="18" height="85" class="device"/>
+      <use href="#mcb-front" x="315" y="105"/>
+    </g>
+    <g id="repr-busbar-comb-rccb-group-layout"
+       data-sema-entity="busbar-comb-rccb-group"
+       data-sema-type="electrical:busbar"
+       data-sema-parent="panel-main"
+       data-sema-busbar-kind="comb"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="261" y="92" width="72" height="7" class="terminal"/>
+      <path d="M270 99v6m18-6v6m18-6v6m18-6v6" class="comb"/>
+    </g>
+    <g id="repr-neutral-bus"
+       data-sema-entity="busbar-neutral"
+       data-sema-type="electrical:busbar"
+       data-sema-parent="panel-main"
+       data-sema-busbar-kind="neutral"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="350" y="260" width="50" height="12" class="bar-back"/>
+      <line x1="360" y1="266" x2="390" y2="266" class="n"/>
+    </g>
+    <g id="repr-pe-bus"
+       data-sema-entity="busbar-pe"
+       data-sema-type="electrical:busbar"
+       data-sema-parent="panel-main"
+       data-sema-busbar-kind="protective-earth"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="55" y="260" width="50" height="12" class="bar-back"/>
+      <line x1="65" y1="266" x2="95" y2="266" class="pe"/>
+    </g>
+    <g id="repr-terminal-outgoing-c4-layout"
+       data-sema-entity="terminal-outgoing-c4"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="panel-main"
+       data-sema-circuit="circuit-hob"
+       data-sema-terminal-kind="grouped-L-N-PE-outgoing"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="189" y="425" width="18" height="25" class="terminal"/>
+      <rect
+            data-sema-role="terminal-anchor"
+            x="198" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-terminal-outgoing-c2-layout"
+       data-sema-entity="terminal-outgoing-c2"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="panel-main"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="grouped-L-N-PE-outgoing"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="207" y="425" width="18" height="25" class="terminal"/>
+      <rect
+            data-sema-role="terminal-anchor"
+            x="216" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-terminal-outgoing-c3-layout"
+       data-sema-entity="terminal-outgoing-c3"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="panel-main"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="grouped-L-N-PE-outgoing"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="225" y="425" width="18" height="25" class="terminal"/>
+      <rect
+            data-sema-role="terminal-anchor"
+            x="234" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-terminal-outgoing-c1-layout"
+       data-sema-entity="terminal-outgoing-c1"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="panel-main"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="grouped-L-N-PE-outgoing"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="243" y="425" width="18" height="25" class="terminal"/>
+      <rect
+            data-sema-role="terminal-anchor"
+            x="252" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-terminal-outgoing-c5-layout"
+       data-sema-entity="terminal-outgoing-c5"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="panel-main"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="grouped-L-N-PE-outgoing"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="geometry"
+            x="261" y="425" width="18" height="25" class="terminal"/>
+      <rect
+            data-sema-role="terminal-anchor"
+            x="270" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+  </g>
+  <g id="layer-terminal-ferrules">
+    <!-- Foreground ferrules cap the semantic wire endpoints without changing their coordinates. -->
+    <g id="ferrule-caps">
+      <rect x="123" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="141" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="159" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="177" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="195" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="213" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="231" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="249" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="267" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="285" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="303" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="321" y="103" width="6" height="4" class="ferrule"/>
+      <rect x="123" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="141" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="159" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="177" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="204" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="213" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="240" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="249" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="267" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="285" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="303" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="321" y="188" width="6" height="4" class="ferrule"/>
+      <rect x="330" y="94" width="6" height="4" class="ferrule"/>
+      <rect x="267" y="97" width="6" height="4" class="ferrule"/>
+      <rect x="285" y="97" width="6" height="4" class="ferrule"/>
+      <rect x="303" y="97" width="6" height="4" class="ferrule"/>
+      <rect x="321" y="97" width="6" height="4" class="ferrule"/>
+      <rect x="357" y="203" width="6" height="4" class="ferrule"/>
+      <rect x="353" y="233" width="6" height="4" class="ferrule"/>
+      <rect x="361" y="233" width="6" height="4" class="ferrule"/>
+      <rect x="387" y="203" width="6" height="4" class="ferrule"/>
+      <rect x="383" y="233" width="6" height="4" class="ferrule"/>
+      <rect x="391" y="233" width="6" height="4" class="ferrule"/>
+      <rect x="353" y="258" width="6" height="4" class="ferrule"/>
+      <rect x="361" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="371" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="381" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="391" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="57" y="258" width="6" height="4" class="ferrule"/>
+      <rect x="65" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="73" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="81" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="89" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="97" y="270" width="6" height="4" class="ferrule"/>
+      <rect x="52" y="290" width="6" height="4" class="ferrule"/>
+      <rect x="189" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="195" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="201" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="207" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="213" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="219" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="225" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="231" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="237" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="243" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="249" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="255" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="261" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="267" y="423" width="6" height="4" class="ferrule"/>
+      <rect x="273" y="423" width="6" height="4" class="ferrule"/>
+    </g>
+    <g id="repr-port-supply-main-pe-out-layout"
+       data-sema-entity="supply-main-pe-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="supply-main"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="55" y="292" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-meter-main-l-in-layout"
+       data-sema-entity="meter-main-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="meter-main"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="126" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-meter-main-n-in-layout"
+       data-sema-entity="meter-main-n-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="meter-main"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="144" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-meter-main-l-out-layout"
+       data-sema-entity="meter-main-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="meter-main"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="126" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-meter-main-n-out-layout"
+       data-sema-entity="meter-main-n-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="meter-main"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="144" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-isolator-l-in-layout"
+       data-sema-entity="main-isolator-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="main-isolator"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="162" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-isolator-n-in-layout"
+       data-sema-entity="main-isolator-n-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="main-isolator"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="180" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-isolator-l-out-layout"
+       data-sema-entity="main-isolator-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="main-isolator"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="162" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-isolator-n-out-layout"
+       data-sema-entity="main-isolator-n-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="main-isolator"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="180" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-phase-in-layout"
+       data-sema-entity="busbar-main-phase-distribution-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-phase-distribution"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="360" y="205" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-phase-c4-layout"
+       data-sema-entity="busbar-main-phase-distribution-tap-c4"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-phase-distribution"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="356" y="235" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-phase-rccb-layout"
+       data-sema-entity="busbar-main-phase-distribution-tap-rccb"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-phase-distribution"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="364" y="235" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-neutral-in-layout"
+       data-sema-entity="busbar-main-neutral-distribution-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-neutral-distribution"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="390" y="205" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-neutral-c4-layout"
+       data-sema-entity="busbar-main-neutral-distribution-tap-c4"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-neutral-distribution"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="386" y="235" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-main-neutral-rccb-layout"
+       data-sema-entity="busbar-main-neutral-distribution-tap-rccb"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-main-neutral-distribution"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned"
+       data-sema-certainty="estimated"
+       data-sema-source="synthetic-design">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="394" y="235" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rcbo-hob-l-in-layout"
+       data-sema-entity="rcbo-hob-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rcbo-hob"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="198" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rcbo-hob-n-in-layout"
+       data-sema-entity="rcbo-hob-n-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rcbo-hob"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="216" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rcbo-hob-l-out-layout"
+       data-sema-entity="rcbo-hob-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rcbo-hob"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="207" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rcbo-hob-n-out-layout"
+       data-sema-entity="rcbo-hob-n-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rcbo-hob"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="216" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rccb-general-circuits-l-in-layout"
+       data-sema-entity="rccb-general-circuits-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rccb-general-circuits"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="234" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rccb-general-circuits-n-in-layout"
+       data-sema-entity="rccb-general-circuits-n-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rccb-general-circuits"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="252" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rccb-general-circuits-l-out-layout"
+       data-sema-entity="rccb-general-circuits-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rccb-general-circuits"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="243" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-rccb-general-circuits-n-out-layout"
+       data-sema-entity="rccb-general-circuits-n-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="rccb-general-circuits"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="252" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-comb-rccb-group-l-in-layout"
+       data-sema-entity="busbar-comb-rccb-group-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-comb-rccb-group"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="333" y="96" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-comb-rccb-group-tap-c2-layout"
+       data-sema-entity="busbar-comb-rccb-group-tap-c2"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-comb-rccb-group"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="270" y="99" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-comb-rccb-group-tap-c3-layout"
+       data-sema-entity="busbar-comb-rccb-group-tap-c3"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-comb-rccb-group"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="288" y="99" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-comb-rccb-group-tap-c1-layout"
+       data-sema-entity="busbar-comb-rccb-group-tap-c1"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-comb-rccb-group"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="306" y="99" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-comb-rccb-group-tap-c5-layout"
+       data-sema-entity="busbar-comb-rccb-group-tap-c5"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-comb-rccb-group"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="L-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="324" y="99" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-kitchen-sockets-l-in-layout"
+       data-sema-entity="breaker-kitchen-sockets-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-kitchen-sockets"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="270" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-office-sockets-l-in-layout"
+       data-sema-entity="breaker-office-sockets-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-office-sockets"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="288" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-general-sockets-l-in-layout"
+       data-sema-entity="breaker-general-sockets-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-general-sockets"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="306" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-lighting-ground-l-in-layout"
+       data-sema-entity="breaker-lighting-ground-l-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-lighting-ground"
+       data-sema-terminal-kind="L-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="324" y="105" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-kitchen-sockets-l-out-layout"
+       data-sema-entity="breaker-kitchen-sockets-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-kitchen-sockets"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="270" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-office-sockets-l-out-layout"
+       data-sema-entity="breaker-office-sockets-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-office-sockets"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="288" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-general-sockets-l-out-layout"
+       data-sema-entity="breaker-general-sockets-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-general-sockets"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="306" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-breaker-lighting-ground-l-out-layout"
+       data-sema-entity="breaker-lighting-ground-l-out"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="breaker-lighting-ground"
+       data-sema-terminal-kind="L-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="324" y="190" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-neutral-in-layout"
+       data-sema-entity="busbar-neutral-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-neutral"
+       data-sema-terminal-kind="N-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="356" y="260" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-in-layout"
+       data-sema-entity="busbar-pe-in"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-terminal-kind="PE-in"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="60" y="260" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-neutral-tap-c2-layout"
+       data-sema-entity="busbar-neutral-tap-c2"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-neutral"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="364" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-neutral-tap-c3-layout"
+       data-sema-entity="busbar-neutral-tap-c3"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-neutral"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="374" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-neutral-tap-c1-layout"
+       data-sema-entity="busbar-neutral-tap-c1"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-neutral"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="384" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-neutral-tap-c5-layout"
+       data-sema-entity="busbar-neutral-tap-c5"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-neutral"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="N-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="394" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-tap-c4-layout"
+       data-sema-entity="busbar-pe-tap-c4"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-circuit="circuit-hob"
+       data-sema-terminal-kind="PE-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="68" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-tap-c2-layout"
+       data-sema-entity="busbar-pe-tap-c2"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="PE-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="76" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-tap-c3-layout"
+       data-sema-entity="busbar-pe-tap-c3"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="PE-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="84" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-tap-c1-layout"
+       data-sema-entity="busbar-pe-tap-c1"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="PE-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="92" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-busbar-pe-tap-c5-layout"
+       data-sema-entity="busbar-pe-tap-c5"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="busbar-pe"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="PE-tap"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="100" y="272" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c4-n-layout"
+       data-sema-entity="terminal-outgoing-c4-n"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c4"
+       data-sema-circuit="circuit-hob"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="192" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c4-pe-layout"
+       data-sema-entity="terminal-outgoing-c4-pe"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c4"
+       data-sema-circuit="circuit-hob"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="204" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c2-n-layout"
+       data-sema-entity="terminal-outgoing-c2-n"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c2"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="210" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c2-pe-layout"
+       data-sema-entity="terminal-outgoing-c2-pe"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c2"
+       data-sema-circuit="circuit-kitchen-sockets"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="222" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c3-n-layout"
+       data-sema-entity="terminal-outgoing-c3-n"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c3"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="228" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c3-pe-layout"
+       data-sema-entity="terminal-outgoing-c3-pe"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c3"
+       data-sema-circuit="circuit-office-sockets"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="240" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c1-n-layout"
+       data-sema-entity="terminal-outgoing-c1-n"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c1"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="246" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c1-pe-layout"
+       data-sema-entity="terminal-outgoing-c1-pe"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c1"
+       data-sema-circuit="circuit-general-sockets"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="258" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c5-n-layout"
+       data-sema-entity="terminal-outgoing-c5-n"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c5"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="N-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="264" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="repr-port-terminal-outgoing-c5-pe-layout"
+       data-sema-entity="terminal-outgoing-c5-pe"
+       data-sema-type="electrical:terminal"
+       data-sema-parent="terminal-outgoing-c5"
+       data-sema-circuit="circuit-lighting-ground"
+       data-sema-terminal-kind="PE-out"
+       data-sema-state="planned">
+      <rect
+            data-sema-role="terminal-anchor"
+            x="276" y="425" width="0" height="0" class="ferrule"/>
+    </g>
+    <g id="distribution-terminal-screws"
+       data-sema-role="decoration">
+      <g transform="translate(360 211)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(356 229)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(364 229)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(390 211)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(386 229)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(394 229)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(356 264)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(364 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(374 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(384 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(394 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(60 264)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(68 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(76 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(84 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(92 268)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(100 268)">
+        <use href="#screw-mark"/>
+      </g>
+    </g>
+    <g id="terminal-strip-cells">
+      <path
+            d="M195 425v25m6-25v25m12-25v25m6-25v25m12-25v25m6-25v25m12-25v25m6-25v25m12-25v25m6-25v25"
+            stroke="#8d999b" stroke-width=".55"/>
+      <g transform="translate(192 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(198 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(204 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(210 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(216 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(222 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(228 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(234 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(240 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(246 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(252 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(258 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(264 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(270 440)">
+        <use href="#screw-mark"/>
+      </g>
+      <g transform="translate(276 440)">
+        <use href="#screw-mark"/>
+      </g>
+    </g>
+    <g id="terminal-strip-core-colors">
+      <path d="M192 450v4h6v6" class="n"/>
+      <path d="M198 450v10" class="l"/>
+      <path d="M204 450v4h-6v6" class="pe"/>
+      <path d="M210 450v4h6v6" class="n"/>
+      <path d="M216 450v10" class="l"/>
+      <path d="M222 450v4h-6v6" class="pe"/>
+      <path d="M228 450v4h6v6" class="n"/>
+      <path d="M234 450v10" class="l"/>
+      <path d="M240 450v4h-6v6" class="pe"/>
+      <path d="M246 450v4h6v6" class="n"/>
+      <path d="M252 450v10" class="l"/>
+      <path d="M258 450v4h-6v6" class="pe"/>
+      <path d="M264 450v4h6v6" class="n"/>
+      <path d="M270 450v10" class="l"/>
+      <path d="M276 450v4h-6v6" class="pe"/>
+    </g>
+  </g>
+  <g id="semantic-context">
+    <g id="repr-system-electrical-layout"
+       data-sema-entity="system-electrical"
+       data-sema-type="electrical:system"
+       data-sema-state="existing"/>
+    <g id="repr-supply-main-layout"
+       data-sema-entity="supply-main"
+       data-sema-type="electrical:supply"
+       data-sema-system="system-electrical"
+       data-sema-supply-kind="utility"
+       data-sema-voltage-v="230"
+       data-sema-frequency-hz="50"
+       data-sema-phases="1"
+       data-sema-state="existing"/>
+    <g id="repr-cable-panel-feeder-layout"
+       data-sema-entity="cable-panel-feeder"
+       data-sema-type="electrical:cable"
+       data-sema-system="system-electrical"
+       data-sema-from="meter-main"
+       data-sema-to="main-isolator"
+       data-sema-core-count="2"
+       data-sema-core-cross-section-mm2="10"
+       data-sema-cable-description="2 x 10 mm2 panel feeder"
+       data-sema-state="planned"/>
+    <g id="repr-circuit-general-sockets-layout"
+       data-sema-entity="circuit-general-sockets"
+       data-sema-type="electrical:circuit"
+       data-sema-system="system-electrical"
+       data-sema-origin="panel-main"
+       data-sema-circuit-kind="final"
+       data-sema-phase="L1"
+       data-sema-state="planned"
+       data-sema-voltage-v="230"
+       data-sema-conductor-mm2="2.5"
+       data-sema-protection-a="16"
+       data-sema-breaker-curve="C"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-x-circuit-code="C1"/>
+    <g id="repr-circuit-kitchen-sockets-layout"
+       data-sema-entity="circuit-kitchen-sockets"
+       data-sema-type="electrical:circuit"
+       data-sema-system="system-electrical"
+       data-sema-origin="panel-main"
+       data-sema-circuit-kind="final"
+       data-sema-phase="L1"
+       data-sema-state="planned"
+       data-sema-voltage-v="230"
+       data-sema-conductor-mm2="2.5"
+       data-sema-protection-a="16"
+       data-sema-breaker-curve="C"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-x-circuit-code="C2"/>
+    <g id="repr-circuit-office-sockets-layout"
+       data-sema-entity="circuit-office-sockets"
+       data-sema-type="electrical:circuit"
+       data-sema-system="system-electrical"
+       data-sema-origin="panel-main"
+       data-sema-circuit-kind="final"
+       data-sema-phase="L1"
+       data-sema-state="planned"
+       data-sema-voltage-v="230"
+       data-sema-conductor-mm2="2.5"
+       data-sema-protection-a="16"
+       data-sema-breaker-curve="C"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-x-circuit-code="C3"/>
+    <g id="repr-circuit-hob-layout"
+       data-sema-entity="circuit-hob"
+       data-sema-type="electrical:circuit"
+       data-sema-system="system-electrical"
+       data-sema-origin="panel-main"
+       data-sema-circuit-kind="final"
+       data-sema-phase="L1"
+       data-sema-state="planned"
+       data-sema-voltage-v="230"
+       data-sema-conductor-mm2="6"
+       data-sema-protection-a="32"
+       data-sema-breaker-curve="C"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-x-circuit-code="C4"/>
+    <g id="repr-circuit-lighting-ground-layout"
+       data-sema-entity="circuit-lighting-ground"
+       data-sema-type="electrical:circuit"
+       data-sema-system="system-electrical"
+       data-sema-origin="panel-main"
+       data-sema-circuit-kind="final"
+       data-sema-phase="L1"
+       data-sema-state="planned"
+       data-sema-voltage-v="230"
+       data-sema-conductor-mm2="1.5"
+       data-sema-conductor-count="3"
+       data-sema-protection-a="10"
+       data-sema-breaker-curve="C"
+       data-sema-rcd-type="A"
+       data-sema-residual-current-ma="30"
+       data-sema-x-circuit-code="C5"/>
+  </g>
+  <g id="layer-labels">
+    <text x="135" y="166" text-anchor="middle" class="label tiny">ENERGY</text>
+    <text x="135" y="175" text-anchor="middle" class="label tiny">METER</text>
+    <text x="171" y="114" text-anchor="middle" class="rating">MAIN</text>
+    <text x="171" y="124" text-anchor="middle" class="tiny">ISOLATOR</text>
+    <text id="label-layout-isolator-rating"
+          data-sema-type="core:label"
+          data-sema-for="main-isolator"
+          data-sema-x-label-template="{data-sema-poles} {data-sema-rated-current-a}A"
+          x="171" y="178" text-anchor="middle" class="rating">2P 63A</text>
+    <text x="360" y="221" text-anchor="middle" class="rating">X0-L</text>
+    <text x="390" y="221" text-anchor="middle" class="rating">X0-N</text>
+    <text id="label-layout-c4-breaker"
+          data-sema-type="core:label"
+          data-sema-for="circuit-hob"
+          x="207" y="114" text-anchor="middle" class="rating">C4 HOB</text>
+    <text x="207" y="123" text-anchor="middle" class="micro">RCBO</text>
+    <text id="label-layout-rcbo-rating"
+          data-sema-type="core:label"
+          data-sema-for="rcbo-hob"
+          data-sema-x-label-template="{data-sema-breaker-curve}{data-sema-rated-current-a} / {data-sema-residual-current-ma}mA"
+          x="207" y="178" text-anchor="middle" class="rating">C32 / 30mA</text>
+    <text x="243" y="114" text-anchor="middle" class="rating">RCCB</text>
+    <text x="243" y="123" text-anchor="middle" class="micro">C2 C3 C1 C5</text>
+    <text id="label-layout-rccb-rating"
+          data-sema-type="core:label"
+          data-sema-for="rccb-general-circuits"
+          data-sema-x-label-template="{data-sema-rated-current-a}A / {data-sema-residual-current-ma}mA"
+          x="243" y="178" text-anchor="middle" class="rating">63A / 30mA</text>
+    <text x="297" y="89" text-anchor="middle" class="micro">L COMB</text>
+    <text id="label-layout-c2-breaker"
+          data-sema-type="core:label"
+          data-sema-for="circuit-kitchen-sockets"
+          x="270" y="114" text-anchor="middle" class="rating">C2</text>
+    <text id="label-layout-c3-breaker"
+          data-sema-type="core:label"
+          data-sema-for="circuit-office-sockets"
+          x="288" y="114" text-anchor="middle" class="rating">C3</text>
+    <text id="label-layout-c1-breaker"
+          data-sema-type="core:label"
+          data-sema-for="circuit-general-sockets"
+          x="306" y="114" text-anchor="middle" class="rating">C1</text>
+    <text id="label-layout-c5-breaker"
+          data-sema-type="core:label"
+          data-sema-for="circuit-lighting-ground"
+          x="324" y="114" text-anchor="middle" class="rating">C5</text>
+    <text id="label-layout-kitchen-rating"
+          data-sema-type="core:label"
+          data-sema-for="breaker-kitchen-sockets"
+          data-sema-x-label-template="{data-sema-breaker-curve}{data-sema-rated-current-a}"
+          x="270" y="178" text-anchor="middle" class="rating">C16</text>
+    <text id="label-layout-office-rating"
+          data-sema-type="core:label"
+          data-sema-for="breaker-office-sockets"
+          data-sema-x-label-template="{data-sema-breaker-curve}{data-sema-rated-current-a}"
+          x="288" y="178" text-anchor="middle" class="rating">C16</text>
+    <text id="label-layout-general-rating"
+          data-sema-type="core:label"
+          data-sema-for="breaker-general-sockets"
+          data-sema-x-label-template="{data-sema-breaker-curve}{data-sema-rated-current-a}"
+          x="306" y="178" text-anchor="middle" class="rating">C16</text>
+    <text id="label-layout-lighting-rating"
+          data-sema-type="core:label"
+          data-sema-for="breaker-lighting-ground"
+          data-sema-x-label-template="{data-sema-breaker-curve}{data-sema-rated-current-a}"
+          x="324" y="178" text-anchor="middle" class="rating">C10</text>
+    <text x="80" y="256" text-anchor="middle" class="micro">PE - C1 C2 C3 C4 C5</text>
+    <text x="375" y="256" text-anchor="middle" class="micro">N1 - RCCB GROUP</text>
+    <text x="50" y="419" class="rating">X1 FIELD TERMINALS<desc>Outgoing field terminals, not protective devices.</desc></text>
+    <text id="label-layout-c4-terminal"
+          data-sema-type="core:label"
+          data-sema-for="circuit-hob"
+          x="198" y="433" text-anchor="middle" class="rating">C4</text>
+    <text id="label-layout-c2-terminal"
+          data-sema-type="core:label"
+          data-sema-for="circuit-kitchen-sockets"
+          x="216" y="433" text-anchor="middle" class="rating">C2</text>
+    <text id="label-layout-c3-terminal"
+          data-sema-type="core:label"
+          data-sema-for="circuit-office-sockets"
+          x="234" y="433" text-anchor="middle" class="rating">C3</text>
+    <text id="label-layout-c1-terminal"
+          data-sema-type="core:label"
+          data-sema-for="circuit-general-sockets"
+          x="252" y="433" text-anchor="middle" class="rating">C1</text>
+    <text id="label-layout-c5-terminal"
+          data-sema-type="core:label"
+          data-sema-for="circuit-lighting-ground"
+          x="270" y="433" text-anchor="middle" class="rating">C5</text>
+    <text x="192" y="449" text-anchor="middle" class="micro">N</text>
+    <text x="198" y="449" text-anchor="middle" class="micro">L</text>
+    <text x="204" y="449" text-anchor="middle" class="micro">PE</text>
+    <text x="210" y="449" text-anchor="middle" class="micro">N</text>
+    <text x="216" y="449" text-anchor="middle" class="micro">L</text>
+    <text x="222" y="449" text-anchor="middle" class="micro">PE</text>
+    <text x="228" y="449" text-anchor="middle" class="micro">N</text>
+    <text x="234" y="449" text-anchor="middle" class="micro">L</text>
+    <text x="240" y="449" text-anchor="middle" class="micro">PE</text>
+    <text x="246" y="449" text-anchor="middle" class="micro">N</text>
+    <text x="252" y="449" text-anchor="middle" class="micro">L</text>
+    <text x="258" y="449" text-anchor="middle" class="micro">PE</text>
+    <text x="264" y="449" text-anchor="middle" class="micro">N</text>
+    <text x="270" y="449" text-anchor="middle" class="micro">L</text>
+    <text x="276" y="449" text-anchor="middle" class="micro">PE</text>
+    <!-- Callouts spread readable circuit names without relocating the terminal assembly. -->
+    <path
+          data-sema-role="decoration"
+          d="M198 464 V475 L170 489 V493" fill="none" stroke="#849399" stroke-width="0.45"/>
+    <text id="label-outgoing-circuit-hob"
+          data-sema-type="core:label"
+          data-sema-for="circuit-hob"
+          x="170" y="502" text-anchor="middle" class="label tiny">C4 Hob</text>
+    <path
+          data-sema-role="decoration"
+          d="M216 464 V475 L202 489 V493" fill="none" stroke="#849399" stroke-width="0.45"/>
+    <text id="label-outgoing-circuit-kitchen-sockets"
+          data-sema-type="core:label"
+          data-sema-for="circuit-kitchen-sockets"
+          x="202" y="502" text-anchor="middle" class="label tiny">C2 Kitchen</text>
+    <path
+          data-sema-role="decoration"
+          d="M234 464 V475 L234 489 V493" fill="none" stroke="#849399" stroke-width="0.45"/>
+    <text id="label-outgoing-circuit-office-sockets"
+          data-sema-type="core:label"
+          data-sema-for="circuit-office-sockets"
+          x="234" y="502" text-anchor="middle" class="label tiny">C3 Office</text>
+    <path
+          data-sema-role="decoration"
+          d="M252 464 V475 L266 489 V493" fill="none" stroke="#849399" stroke-width="0.45"/>
+    <text id="label-outgoing-circuit-general-sockets"
+          data-sema-type="core:label"
+          data-sema-for="circuit-general-sockets"
+          x="266" y="502" text-anchor="middle" class="label tiny">C1 General</text>
+    <path
+          data-sema-role="decoration"
+          d="M270 464 V475 L298 489 V493" fill="none" stroke="#849399" stroke-width="0.45"/>
+    <text id="label-outgoing-circuit-lighting-ground"
+          data-sema-type="core:label"
+          data-sema-for="circuit-lighting-ground"
+          x="298" y="502" text-anchor="middle" class="label tiny">C5 Lighting</text>
+  </g>
+</svg>

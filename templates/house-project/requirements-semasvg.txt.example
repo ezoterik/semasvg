@@ -1,0 +1,2 @@
+# Pin the SemaSVG tool revision to a full Git commit hash. This does not lock transitive dependencies or verify a tag.
+semasvg-validator @ git+https://github.com/ezoterik/semasvg.git@REPLACE_WITH_FULL_COMMIT_HASH#subdirectory=tools/validator

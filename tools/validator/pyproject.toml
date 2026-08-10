@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semasvg-validator"
+version = "0.1.0"
+description = "Prototype validator for SemaSVG"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [
+  { name = "Oleg Balykin" }
+]
+dependencies = [
+  "PyYAML>=6,<7",
+  "jsonschema>=4.10,<5",
+]
+
+[project.scripts]
+semasvg = "semasvg_validator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+semasvg_validator = ["schemas/*.json", "vocab/*.yaml", "vocab/profiles/*.yaml"]
+
+[project.urls]
+Homepage = "https://github.com/ezoterik/semasvg"
+Repository = "https://github.com/ezoterik/semasvg"
+Issues = "https://github.com/ezoterik/semasvg/issues"

@@ -1,0 +1,11 @@
+semasvg: 0.1.0
+project: one-room-two-views
+profiles:
+  building: 0.1.0
+views:
+  - id: room-plan
+    file: room-plan.sema.svg
+    kind: floor-plan
+  - id: room-card
+    file: room-card.sema.svg
+    kind: system-overview

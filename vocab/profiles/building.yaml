@@ -1,0 +1,58 @@
+id: building
+version: 0.1.0
+title: Building and Site
+requires:
+  core: ">=0.1.0,<0.2.0"
+type_prefix: building
+
+enums:
+  opening-kind:
+    - door
+    - window
+    - passage
+    - gate
+
+types:
+  site: {qualified: "building:site"}
+  parcel: {qualified: "building:parcel"}
+  building: {qualified: "building:building"}
+  level: {qualified: "building:level"}
+  space: {qualified: "building:space"}
+  zone: {qualified: "building:zone"}
+  vertical-connection: {qualified: "building:vertical-connection"}
+  column: {qualified: "building:column"}
+  slab: {qualified: "building:slab"}
+  roof: {qualified: "building:roof"}
+  wall: {qualified: "building:wall"}
+  fence: {qualified: "building:fence"}
+  opening: {qualified: "building:opening"}
+  fixture: {qualified: "building:fixture"}
+  furniture: {qualified: "building:furniture"}
+
+attributes:
+  data-sema-name: {kind: string}
+  data-sema-space-kind: {kind: token}
+  data-sema-purpose: {kind: token}
+  data-sema-area-m2: {kind: number, derived: true}
+  data-sema-zone-kind: {kind: token}
+  data-sema-vertical-connection-kind: {kind: token}
+  data-sema-roof-kind: {kind: token}
+  data-sema-wall-kind: {kind: token}
+  data-sema-opening-kind: {kind: enum, enum: opening-kind}
+  data-sema-opening-operation: {kind: token}
+  data-sema-traversable: {kind: boolean}
+  data-sema-swing-space: {kind: entity-ref}
+  data-sema-space: {kind: entity-ref}
+  data-sema-host: {kind: entity-ref}
+  data-sema-connects: {kind: entity-ref-list}
+  data-sema-connects-levels: {kind: entity-ref-list}
+  data-sema-elevation-mm: {kind: number}
+  data-sema-floor-height-mm: {kind: number}
+  data-sema-ceiling-height-mm: {kind: number}
+  data-sema-z-mm: {kind: number}
+  data-sema-z-min-mm: {kind: number}
+  data-sema-z-max-mm: {kind: number}
+  data-sema-z-datum: {kind: entity-ref}
+  data-sema-z-reference: {kind: token}
+  data-sema-fixture-kind: {kind: token}
+  data-sema-furniture-kind: {kind: token}

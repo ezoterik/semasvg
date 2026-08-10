@@ -1,0 +1,1 @@
+"""Bundled official profile vocabularies."""

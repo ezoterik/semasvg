@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="460" viewBox="0 0 4800 3680"
+     data-sema-version="0.1.0"
+     data-sema-project="one-room-two-views"
+     data-sema-view="room-plan"
+     data-sema-view-kind="floor-plan"
+     data-sema-coordinate-mode="physical"
+     data-sema-unit="mm"
+     data-sema-profiles="building@0.1.0"
+     data-sema-scope="room-study">
+  <title>Study: synthetic physical plan</title>
+  <desc>A partial plan of one synthetic room. The room is 4000 by 3000 millimeters; no walls or openings are modeled.</desc>
+  <rect id="repr-room-study-plan"
+        data-sema-entity="room-study"
+        data-sema-type="building:space"
+        data-sema-space-kind="room"
+        data-sema-purpose="study"
+        data-sema-name="Study"
+        data-sema-state="proposed"
+        data-sema-certainty="estimated"
+        data-sema-source="synthetic-design"
+        x="400" y="340" width="4000" height="3000" fill="#e5f1ef" stroke="#245c53" stroke-width="20">
+    <title>Study floor area</title>
+    <desc>This rectangle represents usable floor area. Walls and openings are outside this partial view.</desc>
+  </rect>
+  <text id="label-study-plan"
+        data-sema-type="core:label"
+        data-sema-for="room-study"
+        x="2400" y="1680" text-anchor="middle" font-family="sans-serif" font-size="240" fill="#173d37">Study</text>
+  <text x="2400" y="2000" text-anchor="middle" font-family="sans-serif" font-size="160" fill="#245c53">4000 x 3000 mm (synthetic)</text>
+</svg>

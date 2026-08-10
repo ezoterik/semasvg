@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use SemaSVG in research or tooling, please cite the project."
+title: "SemaSVG"
+type: software
+authors:
+  - family-names: "Balykin"
+    given-names: "Oleg"
+version: 0.1.0
+date-released: 2026-09-06
+repository-code: "https://github.com/ezoterik/semasvg"
+url: "https://github.com/ezoterik/semasvg"
+license: Apache-2.0

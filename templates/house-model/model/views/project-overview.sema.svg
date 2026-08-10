@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-sema-version="0.1.0"
+     data-sema-project="house-project"
+     data-sema-view="project-overview"
+     data-sema-view-kind="system-overview"
+     data-sema-coordinate-mode="diagrammatic"
+     data-sema-profiles=""
+     viewBox="0 0 720 180">
+  <text id="project-overview-note"
+        data-sema-type="core:annotation"
+        x="32" y="72">
+    Add only verified project facts to this user-owned model.
+  </text>
+</svg>

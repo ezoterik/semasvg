@@ -1,0 +1,11 @@
+semasvg: 0.1.0
+project: house-project
+
+profiles:
+  building: 0.1.0
+  electrical: 0.1.0
+
+views:
+  - id: project-overview
+    file: views/project-overview.sema.svg
+    kind: system-overview

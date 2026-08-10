@@ -1,0 +1,83 @@
+id: electrical
+version: 0.1.0
+title: Electrical
+requires:
+  core: ">=0.1.0,<0.2.0"
+type_prefix: electrical
+
+types:
+  system: {qualified: "electrical:system"}
+  supply: {qualified: "electrical:supply"}
+  panel: {qualified: "electrical:panel"}
+  circuit: {qualified: "electrical:circuit"}
+  device: {qualified: "electrical:device"}
+  socket: {qualified: "electrical:socket"}
+  switch: {qualified: "electrical:switch"}
+  light: {qualified: "electrical:light"}
+  junction-box: {qualified: "electrical:junction-box"}
+  appliance: {qualified: "electrical:appliance"}
+  protective-device: {qualified: "electrical:protective-device"}
+  busbar: {qualified: "electrical:busbar"}
+  din-rail: {qualified: "electrical:din-rail"}
+  terminal: {qualified: "electrical:terminal"}
+  connection-point: {qualified: "electrical:connection-point"}
+  conductor: {qualified: "electrical:conductor"}
+  cable: {qualified: "electrical:cable"}
+  route-segment: {qualified: "electrical:route-segment"}
+  route-node: {qualified: "electrical:route-node"}
+  penetration: {qualified: "electrical:penetration"}
+  pathway: {qualified: "electrical:pathway"}
+
+attributes:
+  data-sema-circuit: {kind: entity-ref}
+  data-sema-origin: {kind: entity-ref}
+  data-sema-system: {kind: entity-ref}
+  data-sema-controls-entities: {kind: entity-ref-list}
+  data-sema-voltage-v: {kind: number}
+  data-sema-frequency-hz: {kind: number}
+  data-sema-phases: {kind: integer}
+  data-sema-phase: {kind: token}
+  data-sema-supply-kind: {kind: token}
+  data-sema-circuit-kind: {kind: token}
+  data-sema-input-limit-a: {kind: number}
+  data-sema-module-capacity: {kind: integer}
+  data-sema-power-w: {kind: number}
+  data-sema-conductor-mm2: {kind: number}
+  data-sema-cross-section-mm2: {kind: number}
+  data-sema-conductor-count: {kind: integer}
+  data-sema-core-count: {kind: integer}
+  data-sema-core-cross-section-mm2: {kind: number}
+  data-sema-conductor-kind: {kind: token}
+  data-sema-protection-a: {kind: number}
+  data-sema-breaker-curve: {kind: token}
+  data-sema-rcd-type: {kind: token}
+  data-sema-residual-current-ma: {kind: number}
+  data-sema-rated-current-a: {kind: number}
+  data-sema-dedicated-line: {kind: boolean}
+  data-sema-direction: {kind: token}
+  data-sema-terminal-kind: {kind: token}
+  data-sema-node-kind: {kind: token}
+  data-sema-pathway-kind: {kind: token}
+  data-sema-busbar-kind: {kind: token}
+  data-sema-device-kind: {kind: token}
+  data-sema-module-count: {kind: integer}
+  data-sema-rail: {kind: entity-ref}
+  data-sema-slot-start: {kind: integer}
+  data-sema-cable: {kind: entity-ref}
+  data-sema-installation: {kind: token}
+  data-sema-purpose: {kind: token}
+  data-sema-ip-rating: {kind: token}
+  data-sema-poles: {kind: token}
+  data-sema-color: {kind: token}
+  data-sema-z-mm: {kind: number}
+  data-sema-z-reference: {kind: token}
+  data-sema-enclosure-model: {kind: string}
+  data-sema-cable-description: {kind: string}
+  data-sema-manufacturer: {kind: string}
+  data-sema-model: {kind: string}
+  data-sema-appliance-kind: {kind: token}
+  data-sema-from: {kind: entity-ref}
+  data-sema-to: {kind: entity-ref}
+  data-sema-parent: {kind: entity-ref}
+  data-sema-space: {kind: entity-ref}
+  data-sema-host: {kind: entity-ref}

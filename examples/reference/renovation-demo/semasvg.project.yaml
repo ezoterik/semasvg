@@ -1,0 +1,23 @@
+semasvg: 0.1.0
+project: renovation-demo
+
+profiles:
+  building: 0.1.0
+  electrical: 0.1.0
+
+views:
+  - id: site-plan
+    file: site-plan.sema.svg
+    kind: site-plan
+
+  - id: ground-floor
+    file: ground-floor.sema.svg
+    kind: floor-plan
+
+  - id: building-section
+    file: building-section.sema.svg
+    kind: section
+
+  - id: panel-main-layout
+    file: panel-main-layout.sema.svg
+    kind: equipment-layout

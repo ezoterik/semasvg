@@ -1,0 +1,100 @@
+id: core
+version: 0.1.0
+title: SemaSVG Core
+type_prefix: core
+
+root:
+  required:
+    - data-sema-version
+    - data-sema-project
+    - data-sema-view
+    - data-sema-view-kind
+    - data-sema-coordinate-mode
+    - data-sema-profiles
+  conditional:
+    physical:
+      required:
+        - data-sema-unit
+
+enums:
+  coordinate-mode:
+    - physical
+    - diagrammatic
+  unit:
+    - mm
+  state:
+    - existing
+    - planned
+    - proposed
+    - to-remove
+    - removed
+    - unknown
+  certainty:
+    - verified
+    - measured
+    - traced
+    - documented
+    - estimated
+    - unknown
+
+attributes:
+  data-sema-version:
+    kind: string
+  data-sema-project:
+    kind: string
+  data-sema-view:
+    kind: string
+  data-sema-view-kind:
+    kind: token
+  data-sema-coordinate-mode:
+    kind: enum
+    enum: coordinate-mode
+  data-sema-unit:
+    kind: enum
+    enum: unit
+  data-sema-profiles:
+    kind: string
+  data-sema-revision:
+    kind: string
+  data-sema-north-deg:
+    kind: number
+  data-sema-entity:
+    kind: entity-id
+  data-sema-type:
+    kind: qualified-type
+  data-sema-parent:
+    kind: entity-ref
+  data-sema-scope:
+    kind: entity-ref
+  data-sema-from:
+    kind: entity-ref
+  data-sema-to:
+    kind: entity-ref
+  data-sema-for:
+    kind: entity-ref
+  data-sema-state:
+    kind: enum
+    enum: state
+  data-sema-certainty:
+    kind: enum
+    enum: certainty
+  data-sema-source:
+    kind: token
+  data-sema-role:
+    kind: token
+  data-sema-accuracy-mm:
+    kind: number
+  data-sema-route-length-mm:
+    kind: number
+    derived: true
+
+types:
+  label:
+    qualified: core:label
+    entity_required: false
+  annotation:
+    qualified: core:annotation
+    entity_required: false
+  reference:
+    qualified: core:reference
+    entity_required: false

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://semasvg.org/schema/vocabulary-0.1.json",
+  "title": "SemaSVG vocabulary",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "title",
+    "type_prefix"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9.-]*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type_prefix": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9.-]*$"
+    },
+    "requires": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "root": {
+      "type": "object"
+    },
+    "enums": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^data-sema-[a-z][a-z0-9-]*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "entity-id",
+              "qualified-type",
+              "entity-ref",
+              "entity-ref-list",
+              "enum",
+              "token",
+              "string",
+              "number",
+              "integer",
+              "boolean"
+            ]
+          },
+          "enum": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "enum"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "enum"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": true
+      }
+    },
+    "types": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "qualified"
+        ],
+        "properties": {
+          "qualified": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9.-]*:[a-z][a-z0-9-]*$"
+          },
+          "entity_required": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
